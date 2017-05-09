@@ -35,11 +35,11 @@ module.exports = {
           '^/Search': ''
         }
       },
-      '/mock': {
-        target: 'http://localhost:9000/',
+        '/cross': {
+        target: 'http://cross.bentudou.com',
         changeOrigin: true,
         pathRewrite: {
-          '^/mock': ''
+          '^/cross': ''
         }
       }
     },

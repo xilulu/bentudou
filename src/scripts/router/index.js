@@ -10,6 +10,7 @@ import Categorylist from '@/scripts/components/Categorylist'
 import Board from '@/scripts/components/Board'
 import Car from '@/scripts/components/Car'
 import Mine from '@/scripts/components/Mine'
+import Detail from '@/scripts/components/Detail'
 
 
 Vue.use(Router)
@@ -38,6 +39,7 @@ export default new Router({
           component:Mine
         }
       ]
+<<<<<<< d1ba3314486fda249b288ada43bd94ffe80a5303
     },{
       path:'/listtouch',
       component:Listtouch
@@ -50,6 +52,12 @@ export default new Router({
     },{
       path: '/categorylist/:type',
       component:Categorylist
+=======
+    },
+    {
+      path: '/detail/:type',
+      component: Detail
+>>>>>>> 第一次合并
     }
   ]
 })

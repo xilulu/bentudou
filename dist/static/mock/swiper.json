@@ -1,4 +1,5 @@
 {
+<<<<<<< d1ba3314486fda249b288ada43bd94ffe80a5303
   "count": 10,
   "start": 0,
   "total": 22,
@@ -692,3 +693,11 @@
   ],
   "title": "正在上映的电影-北京"
 }
+=======
+  "banner":[
+    {"img":"http://img.westwinglife.cn/data/advertisement/1493118785291_14f4fcf7db0c47ddaf98c431e87cd77f.jpg"},
+    {"img":"http://img.westwinglife.cn/data/advertisement/1493118785291_14f4fcf7db0c47ddaf98c431e87cd77f.jpg"},
+    {"img":"http://img.westwinglife.cn/data/advertisement/1493118785291_14f4fcf7db0c47ddaf98c431e87cd77f.jpg"}
+  ]
+}
+>>>>>>> 第一次合并

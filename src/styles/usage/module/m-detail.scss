@@ -1,0 +1,22 @@
+@import "../fragment/yo-header";
+
+@include yo-header(
+  $name: b,
+  $bgcolor: #fff,
+  $item-ico-color: #333,
+  $border-color:#ccc,
+  $color: #333,
+  $font-size: .16rem
+){
+	.affirm {
+		color: #333
+	}
+}
+.m-boardtail {
+  .mint-swipe {
+    height: 3.6rem;
+    img {
+      width: 100%;
+    }
+  }
+}  
