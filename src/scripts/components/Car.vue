@@ -17,11 +17,5 @@ window.vm = vm
 export default vm
 
 
-import Vue from 'vue'
-import Header from './Header2.vue'
-Vue.component('Header', Header)
-  export default {
-
-}
 
 </script>

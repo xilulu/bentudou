@@ -20,7 +20,7 @@ Vue.component(SwipeItem.name, SwipeItem);
 
 import utilAxios from '../utils/axios'
 
-export default {
+
 
 
 import BoardList from './BoardList.vue'
