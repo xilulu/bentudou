@@ -5,7 +5,18 @@
     </div>
   
 </template>
-<script type="text/javascript">
+<script>
+ let vm = {
+  data(){
+    return {
+        title:'true'
+    }
+  }
+}
+window.vm = vm
+export default vm
+
+
 import Vue from 'vue'
 import Header from './Header2.vue'
 Vue.component('Header', Header)

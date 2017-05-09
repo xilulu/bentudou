@@ -1,6 +1,5 @@
 <template>
     <div class="m-board">
-   
         <mt-swipe :auto="4000">
             <mt-swipe-item v-for="(item,index) in dataSource " :key="index">
                 <img :src="'http://img.westwinglife.cn'+item.advertisementImg" alt=""/>
@@ -18,6 +17,10 @@ import 'mint-ui/lib/style.css'
 
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
+
+import utilAxios from '../utils/axios'
+
+export default {
 
 
 import BoardList from './BoardList.vue'
@@ -42,5 +45,6 @@ export default {
                that.dataSource =  that.dataSource.concat(res.data.data.advertisementList);
         });
     }
+
 }
 </script>
