@@ -1,29 +1,21 @@
 <template>
     <div class="m-index">
-      <form class="yo-search">
-          <label class="action">
-            <i class="yo-ico yo-ico-suggest"></i>
-            <input type="text" class="input" placeholder="维骨力">
-            </label>
-          <span class="yo-btn yo-ico"></span>
-      </form>
+    <header>
+        <Header1 />
+     </header>   
         <section>
              <router-view></router-view>
         </section>
         <nav>
              <ul>
-            <!--    <li class="active yo-ico"><router-link to='/board'>&#xe6b8;<b>首页</b></router-link></li>
-                <li class="yo-ico"><router-link to='/list'>&#xe7da;<b>分类</b></router-link></li>
-                <li class="yo-ico"><router-link to='/car'>&#xe78b;<b>购物车</b></router-link></li>
-                <li class="yo-ico"><router-link to='/mine'>&#xe78b;<b>我的</b></router-link></li>-->
                 <router-link tag="li" to="/board" class="yo-ico" active-class="active">
-                     <span>&#xe6b8;<b>首页</b></span>
+                     <span>&#xe632;<b>首页</b></span>
                 </router-link>
-                <router-link tag="li" to="/list" class="yo-ico" active-class="active">
-                     <span>&#xe7da;<b>分类</b></span>
+                <router-link tag="li" to="/liststart" class="yo-ico" active-class="active">
+                     <span>&#xe610;<b>分类</b></span>
                 </router-link>
                  <router-link tag="li" to="/car" class="yo-ico" active-class="active">
-                     <span>&#xe78b;<b>购物车</b></span>
+                     <span>&#xe62a;<b>购物车</b></span>
                 </router-link>
                  <router-link tag="li" to="/mine" class="yo-ico" active-class="active">
                      <span>&#xe78b;<b>我的</b></span>
@@ -32,3 +24,15 @@
         </nav>
     </div>
 </template>
+<script>
+  import Vue from 'vue'
+  import Header1 from './Header1.vue'
+  Vue.component('Header1', Header1)
+
+  import Header2 from './Header2.vue'
+  Vue.component('Header2', Header2)
+
+  export default {
+
+  }
+</script>

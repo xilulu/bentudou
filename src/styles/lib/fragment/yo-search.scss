@@ -15,7 +15,7 @@
         position: relative;
         // placeholder旁边的箭头颜色
         color: map-get($search, placeholder-color);
-        > .input {
+        >  .input {
             display: block;
             @include appearance;
             @include flex;

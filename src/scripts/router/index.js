@@ -1,10 +1,16 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '@/scripts/components/Index'
+import Liststart from '@/scripts/components/Liststart'
+import Listtouch from '@/scripts/components/Listtouch'
 import List from '@/scripts/components/List'
+import Category from '@/scripts/components/Category'
+import Categorylist from '@/scripts/components/Categorylist'
+
 import Board from '@/scripts/components/Board'
 import Car from '@/scripts/components/Car'
 import Mine from '@/scripts/components/Mine'
+
 
 Vue.use(Router)
 
@@ -20,8 +26,8 @@ export default new Router({
           component:Board
         },
          {
-          path:'list',
-          component:List
+          path:'liststart',
+          component:Liststart
         },
          {
           path:'car',
@@ -32,6 +38,18 @@ export default new Router({
           component:Mine
         }
       ]
+    },{
+      path:'/listtouch',
+      component:Listtouch
+    },{
+      path: '/list/:type',
+      component:List
+    },{
+      path: '/category/:type',
+      component:Category
+    },{
+      path: '/categorylist/:type',
+      component:Categorylist
     }
   ]
 })
