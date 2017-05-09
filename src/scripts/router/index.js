@@ -5,6 +5,7 @@ import List from '@/scripts/components/List'
 import Board from '@/scripts/components/Board'
 import Car from '@/scripts/components/Car'
 import Mine from '@/scripts/components/Mine'
+import Detail from '@/scripts/components/Detail'
 
 Vue.use(Router)
 
@@ -32,6 +33,10 @@ export default new Router({
           component:Mine
         }
       ]
+    },
+    {
+      path: '/detail/:type',
+      component: Detail
     }
   ]
 })

@@ -1,10 +1,13 @@
 <template>
     <div class="m-board">
+   
         <mt-swipe :auto="4000">
-            <mt-swipe-item v-for="(item,index) in list ">
-                <img :src="item.images.large" alt=""/>
+            <mt-swipe-item v-for="(item,index) in dataSource " :key="index">
+                <img :src="'http://img.westwinglife.cn'+item.advertisementImg" alt=""/>
             </mt-swipe-item>
         </mt-swipe>
+        <board-list></board-list>
+       
     </div>
   
 </template>
@@ -16,22 +19,27 @@ import 'mint-ui/lib/style.css'
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
 
+
+import BoardList from './BoardList.vue'
+Vue.component('board-list', BoardList)
+
 import axios  from 'axios'
 export default {
     data(){
         return{
-            list:[]
+            dataSource:[]
         }
     },
+    
     mounted:function(){
         var that = this;
         axios({
             method:'get',
-            url:'http://localhost:9000/swiper'
+            url:'/cross/Index/getNewIndexData.htm?operationPositionShowGoodsNumber=10',
         })
             .then(function(res) {
-               that.list =   res.data.subjects;
-               console.log(res)
+                //console.log(res.data.data);
+               that.dataSource =  that.dataSource.concat(res.data.data.advertisementList);
         });
     }
 }
