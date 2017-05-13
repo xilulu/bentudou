@@ -1,11 +1,12 @@
 <template>
     <div>
-    <Header title='购物车' :isShowinputs="true"/>
+    
           car...
     </div>
   
 </template>
 <script>
+
  let vm = {
   data(){
     return {

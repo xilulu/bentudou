@@ -1,12 +1,6 @@
 <template>
     <div class="m-index">
 
-       <Header title='' :isShowinput="true"/>
-
-    <header>
-        <Header1 />
-     </header>   
-
         <section>
              <router-view></router-view>
         </section>
@@ -34,9 +28,7 @@
   import Header1 from './Header1.vue'
   Vue.component('Header1', Header1)
 
-  import Header2 from './Header2.vue'
-  Vue.component('Header2', Header2)
-
+ 
   export default {
 
   }

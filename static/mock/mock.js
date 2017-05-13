@@ -1,7 +1,7 @@
-var swiper = require("./swiper.json")
+var detail = require("./detail.json")
 
 module.exports = function(){
     return{
-        'swiper':swiper
+        'detail':detail
     }
 }

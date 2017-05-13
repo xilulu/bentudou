@@ -1,12 +1,19 @@
 <template>
     <div class="liststart">
+     <header>
+        <Header1 />
+     </header> 
+
     <mt-loadmore :top-method="loadTop" :bottom-method="loadBottom" :bottom-all-loaded="allLoaded" :autoFill="false" ref="loadmore">
         <p class="listp">全部分类 </p>
-         <router-link :key="index" :to="`/category/${item.categoryId}`" tag="div" v-for="(item,index) in listdata">
+        <div class="Liststart">
+         <router-link :key="index" :to="`/category/${item.categoryId}`" tag="div" v-for="(item,index) in listdata" class="Listdata">
             <img :src='"http://cross.bentudou.com"+item.categoryImg'  alt="">
             <p v-html="item.categoryName"></p>  
-        </router-link>   
-     </mt-loadmore>   
+        </router-link>
+        </div>   
+     </mt-loadmore> 
+       
     </div>
 </template>
 <script>

@@ -1,12 +1,16 @@
 <template>
-    <div class="m-board">
+    <div class="m-section">
+     <header>
+        <Header1 />
+     </header>
+     <div class="m-board">
         <mt-swipe :auto="4000">
             <mt-swipe-item v-for="(item,index) in dataSource " :key="index">
                 <img :src="'http://img.westwinglife.cn'+item.advertisementImg" alt=""/>
             </mt-swipe-item>
         </mt-swipe>
         <board-list></board-list>
-       
+    </div>  
     </div>
   
 </template>
@@ -19,8 +23,6 @@ Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
 
 import utilAxios from '../utils/axios'
-
-
 
 
 import BoardList from './BoardList.vue'

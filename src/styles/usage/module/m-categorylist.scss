@@ -1,4 +1,4 @@
-.Listsearch{
+.Categorylist{
         width: 100%;
         @include flexbox();
         @include flex-direction(row);
@@ -7,12 +7,12 @@
         overflow-y: scroll;
         height:6.23rem;
         background:#f2f2f2;
-        .list-search{ 
+        li{ 
         width: 1.7rem;
         height:2.3rem;
         background:#fff;
         margin:.05rem;
-        .list-img{  
+        img{  
           display:block;
      	 width: 1.2rem;
      	 height: 1.2rem;
@@ -26,17 +26,8 @@
           b {
           font-size: .14rem;
           font-weight: normal;
-          text-align: center;
+          padding-left:.4rem;
           color: green;
-   		 }
-   		  i{
-            font-size: .12rem;
-            font-weight: normal;
-            
-          }
-   		 .list-imgico{
-   		 	width: .15rem;
-     		 height: .15rem;
-   		 }
+    }
       }
   }

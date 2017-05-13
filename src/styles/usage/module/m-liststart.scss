@@ -1,9 +1,4 @@
-section{
-     @include flex();
-    width: 100%;
-    background: #fff;
-    overflow-y: scroll;
-}
+
 .liststart{
     overflow-y: scroll;
     @include flex();
@@ -20,9 +15,27 @@ section{
     background: #eee;   
   
 }
-.liststart img{
-    display:block;
+
+
+.Liststart{
+      width: 100%;
+      @include flexbox();
+      @include flex-direction(row);
+      @include justify-content(center);
+      @include flex-wrap(wrap);
+      .Listdata{ 
+      width: 45%;
+      img{
+        
+        display:block;
     width: 1rem;
     height: 1rem;
     margin: 0.1rem auto;
+      }
+      p{
+          font-size: .12rem;
+          font-weight: normal;
+          text-align: center;
+        }
+    }
 }

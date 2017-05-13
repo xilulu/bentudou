@@ -1,0 +1,23 @@
+.hot-search{
+	text-align: center;
+	height: .35rem;
+	line-height: .3rem;
+	background: #f2f2f2;
+	b{
+		font-size: .16rem;
+		color: #07ae51;
+	}
+}
+.searchlist{
+	width: 100%;
+    @include flexbox();
+	li{
+		width:.6rem;
+		height:.3rem;
+		border:1px solid #ccc;
+		margin:.03rem;
+		padding:.04rem;
+		border-radius:.05rem;
+		text-align:center;
+	}
+}

@@ -66,13 +66,11 @@ export default {
             url: '/cross/OperatingPosition/getGoodsOperationsList.htm?operationsType=05&page='+this.page+'&rows=10',
             method: 'get',
             callback: function (res) {
-              console.log(res.data.data.goodsOperationsList);
+              //console.log(res.data.data.goodsOperationsList);
              that.allList=that.allList.concat(res.data.data.goodsOperationsList);
               that.$refs.loadmore.onBottomLoaded();
             }
           })
-         
-
 
        }
       },

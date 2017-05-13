@@ -7,11 +7,16 @@
                 <input type="text" class="input" v-model="x" placeholder="输入搜索关键字..." v-on:keyup.enter="submit">
             </label>
         </div>
-        <p>热门搜索</p>
-        <span><router-link :to="`/list/${'Coach'}`">Coach</router-link></span>
-        <span><router-link :to="`/list/${'Bad Air'}`">Bad Air</router-link></span>
-        <span><router-link :to="`/list/${'维骨力'}`">维骨力</router-link></span>
-        <span><router-link :to="`/list/${'Mk'}`">Mk</router-link></span>
+        <h3 :title='title' class="hot-search">热门搜索: <b>{{title}}</b></h3>
+        <router-view :onchange="changeHandler"></router-view>
+        <ul class="searchlist">
+          <router-link tag="li" :to="`/list/${'Coach'}`">Coach</router-link>
+          <router-link tag="li" :to="`list/${'Bad Air'}`">Bad Air</router-link>
+          <router-link tag="li" :to="`/list/${'维骨力'}`">维骨力</router-link>
+          <router-link tag="li" :to="`/list/${'Mk'}`">Mk</router-link>
+        </ul>
+         
+        
     </div>
 </template>
 <script>
@@ -23,10 +28,18 @@ export default {
     return {
       boardList: [],
       title: '',
-      x: ''
+      x: '',
+      title: this.$store.state.title
     }
   },
   methods: {
+    changeHandler: function (title) {
+        this.$store.commit({
+          type: 'change',
+          title: title
+        })
+        this.title = this.$store.state.title
+      },
     back: function () {
       this.$router.go(-1)
     },

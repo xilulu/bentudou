@@ -42,13 +42,16 @@ export default new Router({
 
     },{
       path:'/listtouch',
-      component:Listtouch
+      component:Listtouch,
+      children:[
+        {
+          path: '/list/:type',
+          component:List
+        }
+      ]
     },{
-      path: '/list/:type',
-      component:List
-    },{
-      path: '/category/:type',
-      component:Category
+       path:'/category/:type',
+       component:Category
     },{
       path: '/categorylist/:type',
       component:Categorylist
